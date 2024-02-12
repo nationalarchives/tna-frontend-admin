@@ -1,0 +1,74 @@
+@use "sass:math";
+
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+@use "@nationalarchives/frontend/nationalarchives/tools/media";
+@use "@nationalarchives/frontend/nationalarchives/tools/typography";
+
+@import "https://use.typekit.net/hkj3kuz.css";
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}
+
+#storybook-docs {
+  width: 800px;
+  max-width: calc(100% - 4rem);
+  margin: 0 auto;
+  padding: 2rem;
+
+  background-color: #ddd;
+
+  outline: #ddd 100vmax solid;
+}
+
+.sbdocs {
+  &.sbdocs-wrapper {
+    max-width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 2rem;
+
+    box-shadow:
+      0 1rem 2rem rgb(0 0 0/0.125),
+      0 0.25rem 0.5rem rgb(0 0 0/0.25);
+
+    border-radius: 0.25rem;
+  }
+
+  &.sbdocs-content {
+    max-width: none;
+  }
+}
+
+#storybook-docs {
+  div.docs-story {
+    background-position:
+      16px 16px,
+      16px 16px,
+      16px 16px,
+      16px 16px !important;
+
+    > div {
+      margin: 0;
+      padding: 1rem;
+
+      .innerZoomElementWrapper {
+        > * {
+          border: none !important;
+        }
+      }
+    }
+  }
+}
+
+.sb-story.sb-unstyled {
+  @include colour.colour-css-vars;
+
+  @include colour.colour-background("page-background");
+}
+
+.tna-template--padded {
+  > .tna-template__body {
+    padding: 16px;
+  }
+}

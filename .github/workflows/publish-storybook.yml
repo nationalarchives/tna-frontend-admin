@@ -1,0 +1,51 @@
+name: Publish Storybook
+
+on:
+  push:
+    branches:
+      - main
+      - proof-of-concept # TODO: Remove when merged into main
+    paths:
+      - '.storybook/**'
+      - 'src/**'
+      - '.babelrc.json'
+      - '.eslintrc.js'
+      - '.nvmrc'
+      - '.stylelintrc'
+      - 'govuk-prototype-kit.config.json'
+      - 'package-lock.json'
+      - 'package.json'
+      - 'webpack.config.js'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Storybook
+        run: npm run build
+      - uses: actions/configure-pages@v3
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: storybook
+      - id: deployment
+        uses: actions/deploy-pages@v2

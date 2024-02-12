@@ -1,0 +1,10 @@
+.DS_Store
+.vscode
+__snapshots__
+node_modules
+package
+storybook
+*.zip
+*.tgz
+build-storybook.log
+RELEASE_NOTES.txt

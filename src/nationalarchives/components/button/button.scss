@@ -1,0 +1,22 @@
+@use "@nationalarchives/frontend/nationalarchives/components/button";
+
+.tna-admin-button {
+  @extend .tna-button;
+
+  font-family: cursive;
+  text-transform: uppercase;
+
+  transform: rotate(-2deg);
+
+  transition: all 400ms;
+
+  box-shadow: 0 0 0 #f0a;
+
+  &:hover {
+    transform: rotate(-10deg) scale(1.1);
+
+    transition: all 100ms;
+
+    box-shadow: 0 0.25rem 1rem #f0a;
+  }
+}

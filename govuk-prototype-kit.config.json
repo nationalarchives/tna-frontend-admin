@@ -1,0 +1,6 @@
+{
+  "nunjucksPaths": ["/"],
+  "scripts": ["/nationalarchives/all.js"],
+  "assets": ["/nationalarchives/assets"],
+  "stylesheets": ["/nationalarchives/prototype-kit.css"]
+}
