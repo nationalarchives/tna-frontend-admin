@@ -1,6 +1,6 @@
-import "@nationalarchives/frontend/nationalarchives/all.scss";
+// import "../src/nationalarchives/all.scss";
+// import "@nationalarchives/frontend/nationalarchives/all.scss";
 import "@nationalarchives/frontend/nationalarchives/font-awesome.scss";
-import "../src/nationalarchives/all.scss";
 import { a11yConfig } from "./storybook-config";
 import { customViewports } from "./viewports";
 

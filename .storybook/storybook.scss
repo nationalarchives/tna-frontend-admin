@@ -1,8 +1,7 @@
 @use "sass:math";
 
+@use "../src/nationalarchives/all";
 @use "@nationalarchives/frontend/nationalarchives/tools/colour";
-@use "@nationalarchives/frontend/nationalarchives/tools/media";
-@use "@nationalarchives/frontend/nationalarchives/tools/typography";
 
 @import "https://use.typekit.net/hkj3kuz.css";
 

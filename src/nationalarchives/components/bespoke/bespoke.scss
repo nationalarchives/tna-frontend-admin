@@ -1,0 +1,30 @@
+@use "@nationalarchives/frontend/nationalarchives/tools/colour";
+@use "@nationalarchives/frontend/nationalarchives/tools/media";
+@use "@nationalarchives/frontend/nationalarchives/tools/spacing";
+@use "@nationalarchives/frontend/nationalarchives/tools/typography";
+
+.tna-bespoke {
+  padding-left: spacing.space("s");
+  @include spacing.space-above;
+
+  @include colour.accent;
+  @include colour.contrast-on-mobile;
+  @include colour.colour-border("keyline-dark", 0.5rem, solid, left);
+
+  @include colour.colour-font("font-dark");
+  @include typography.heading-font;
+  @include typography.relative-font-size(40);
+
+  @include media.on-mobile {
+    padding-left: spacing.space("xs");
+
+    @include colour.colour-font("font-light");
+    @include typography.main-font;
+    @include typography.relative-font-size(24);
+  }
+
+  @include colour.on-high-contrast {
+    @include colour.colour-font("font-base");
+    @include typography.relative-font-size(80);
+  }
+}

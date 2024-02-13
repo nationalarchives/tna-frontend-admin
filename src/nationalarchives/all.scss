@@ -1,5 +1,9 @@
 @use "@nationalarchives/frontend/nationalarchives/variables/grid" with (
-  $largest-container-width: 1337px
+  $largest-container-width: 90rem
+);
+@use "@nationalarchives/frontend/nationalarchives/variables/typography" with (
+  $body-font-size-px: 16,
+  $body-font-size-px-mobile: 16
 );
 @use "@nationalarchives/frontend/nationalarchives/variables";
 @use "@nationalarchives/frontend/nationalarchives/tools";
