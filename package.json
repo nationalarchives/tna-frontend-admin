@@ -30,7 +30,7 @@
   "sass": "nationalarchives/all.scss",
   "homepage": "https://github.com/nationalarchives/tna-frontend-admin#readme",
   "dependencies": {
-    "@nationalarchives/frontend": "^0.1.39"
+    "@nationalarchives/frontend": "^0.1.41"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
