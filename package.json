@@ -29,11 +29,13 @@
   },
   "sass": "nationalarchives/all.scss",
   "homepage": "https://github.com/nationalarchives/tna-frontend-admin#readme",
+  "dependencies": {
+    "@nationalarchives/frontend": "^0.1.39"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@mdx-js/react": "^3.0.1",
-    "@nationalarchives/frontend": "^0.1.36",
     "@storybook/addon-a11y": "^7.6.14",
     "@storybook/addon-docs": "^7.6.14",
     "@storybook/addon-essentials": "^7.6.14",
